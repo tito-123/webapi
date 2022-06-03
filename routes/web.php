@@ -16,3 +16,9 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/api/empresas', 'EmpresasController@index');
+$router->get('/api/empresas/{id}', 'EmpresasController@show');
+$router->post('/api/empresas', 'EmpresasController@store');
+$router->put('/api/empresas/{id}', 'EmpresasController@update');
+$router->delete('/api/empresas/{id}', 'EmpresasController@destroy');
